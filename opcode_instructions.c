@@ -13,8 +13,8 @@ void monty_push(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (!g_data.sec_param)
 	{
-		dprintf(2, "L%u: ", nline);
-		dprintf(2, "usage: push integer\n");
+		fprintf(stderr, "L%u: ", nline);
+		fprintf(stderr, "usage: push integer\n");
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -23,8 +23,8 @@ void monty_push(stacknode_t **doubly_ll, unsigned int nline)
 	{
 		if (!isdigit(g_data.sec_param[j]) && g_data.sec_param[j] != '-')
 		{
-			dprintf(2, "L%u: ", nline);
-			dprintf(2, "usage: push integer\n");
+			fprintf(stderr, "L%u: ", nline);
+			fprintf(stderr, "usage: push integer\n");
 			free_g_data();
 			exit(EXIT_FAILURE);
 		}
@@ -72,8 +72,8 @@ void monty_pint(stacknode_t **doubly, unsigned int nline)
 
 	if (*doubly_ll == NULL)
 	{
-		dprintf(2, "L%u: ", nline);
-		dprintf(2, "can't pint, stack empty\n");
+		fprintf(stderr, "L%u: ", nline);
+		fprintf(stderr, "can't pint, stack empty\n");
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -94,7 +94,7 @@ void monty_pop(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (doubly_ll == NULL || *doubly_ll == NULL)
 	{
-		dprintf(2, "L%u: can't pop an empty stack\n", nline);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -122,7 +122,7 @@ void monty_swap(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't swap, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
