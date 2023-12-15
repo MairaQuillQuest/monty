@@ -1,4 +1,5 @@
 #include "monty.h"
+#include "stdio.h"
 
 /**
  *add_node_end - add a note at the end of the doubly link list
