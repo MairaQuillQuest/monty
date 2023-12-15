@@ -49,7 +49,7 @@ void monty_add(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't add, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't add, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -91,7 +91,7 @@ void monty_sub(stacknode_t **doubly, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't sub, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't sub, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
