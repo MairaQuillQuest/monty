@@ -66,7 +66,7 @@ void monty_pall(stacknode_t **doubly_ll, unsigned int nline)
  * @nline: line number
  * Return: no return
  */
-void monty_pint(stacknode_t **doubly, unsigned int nline)
+void monty_pint(stacknode_t **doubly_ll, unsigned int nline)
 {
 	(void)nline;
 
