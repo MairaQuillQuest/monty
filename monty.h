@@ -97,10 +97,6 @@ stacknode_t *add_node_end(stacknode_t **dll_head, const int n);
 stacknode_t *add_node_begin(stacknode_t **dll_head, const int n);
 void free_dll(stacknode_t *dll_head);
 
-#ifndef _GNU_SOURCE
-#define dprintf(fd, format, ...) fprintf(stderr, format, ##__VA_ARGS__)
-#endif
-
 /* main */
 void free_g_data(void);
 
