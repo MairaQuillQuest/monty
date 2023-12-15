@@ -1,3 +1,5 @@
+#include "monty.h"
+
 /**
  * main - Monty entry point.
  *
