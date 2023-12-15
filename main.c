@@ -78,7 +78,8 @@ int main(int argc, char *argv[])
     ssize_t nlines;
     char *line = NULL;
 
-    while ((nlines = getline(&line, &size, g_data.file_desc)) != -1)
+    nlines = getline(&line, &size, g_data.file_desc);
+    while (nlines != -1)
     {
         char *token = _custom_strtok(line, " \t\n");
         if (token && token[0] != '#')
@@ -94,6 +95,7 @@ int main(int argc, char *argv[])
             g_data.sec_param = _custom_strtok(NULL, " \t\n");
             f(&g_data.dll_head, g_data.cur_line);
         }
+        nlines = getline(&line, &size, g_data.file_desc);
         g_data.cur_line++;
     }
 
