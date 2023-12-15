@@ -76,8 +76,7 @@ int main(int argc, char *argv[])
 
 	file_desc = check_input(argc, argv);
 	start_g_data(file_desc);
-	nlines = getline(&g_data.input_buffer, &size, file_desc);
-	while (nlines != -1)
+	while (fgets(g_data.input_buffer, size, file_desc) != NULL) 
 	{
 		lines[0] = _custom_strtok(g_data.input_buffer, " \t\n");
 		if (lines[0] && lines[0][0] != '#')
