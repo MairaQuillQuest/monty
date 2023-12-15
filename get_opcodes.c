@@ -9,7 +9,7 @@
  */
 void (*get_opcode_func(char *opc))(stacknode_t **stacknode, unsigned int line_number)
 {
-	instruction_t instruct[] = {
+	opfunc_t instruct[] = {
 		{"push", monty_push},
 		{"pall", monty_pall},
 		{"pint", monty_pint},
@@ -33,7 +33,7 @@ void (*get_opcode_func(char *opc))(stacknode_t **stacknode, unsigned int line_nu
 
 	for (i = 0; instruct[i].opcode; i++)
 	{
-		if (custom_strcmp(instruct[i].opcode, opc) == 0)
+		if (_custom_strcmp(instruct[i].opcode, opc) == 0)
 			break;
 	}
 
