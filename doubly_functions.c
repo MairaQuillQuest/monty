@@ -66,7 +66,7 @@ stacknode_t *add_node_begin(stacknode_t **dll_head, const int n)
 		return (*dll_head);
 	}
 	(*dll_head)->prev = tmpr;
-	tmpr->next = (*head);
+	tmpr->next = (*dll_head);
 	tmpr->prev = NULL;
 	*dll_head = tmpr;
 	return (*dll_head);
