@@ -16,7 +16,7 @@ stacknode_t *add_node_end(stacknode_t **dll_head, const int n)
 	tmpr = malloc(sizeof(stacknode_t));
 	if (!tmpr)
 	{
-		dprintf(2, "Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -53,7 +53,7 @@ stacknode_t *add_node_begin(stacknode_t **dll_head, const int n)
 	tmpr = malloc(sizeof(stacknode_t));
 	if (!tmpr)
 	{
-		dprintf(2, "Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
