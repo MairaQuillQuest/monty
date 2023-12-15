@@ -19,14 +19,14 @@ void monty_div(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't div, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't div, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly_ll)->n == 0)
 	{
-		dprintf(2, "L%u: division by zero\n", nline);
+		fprintf(stderr, "L%u: division by zero\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -55,7 +55,7 @@ void monty_mul(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't mul, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't mul, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -85,14 +85,14 @@ void monty_mod(stacknode_t **doubly_ll, unsigned int nline)
 
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't mod, stack too short\n", nline);
+		fprintf(stderr, "L%u: can't mod, stack too short\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly_ll)->n == 0)
 	{
-		dprintf(2, "L%u: division by zero\n", nline);
+		fprintf(stderr, "L%u: division by zero\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
@@ -112,13 +112,13 @@ void monty_pchar(stacknode_t **doubly_ll, unsigned int nline)
 {
 	if (doubly_ll == NULL || *doubly_ll == NULL)
 	{
-		dprintf(2, "L%u: can't pchar, stack empty\n", nline);
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
 	if ((*doubly_ll)->n < 0 || (*doubly_ll)->n >= 128)
 	{
-		dprintf(2, "L%u: can't pchar, value out of range\n", nline);
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", nline);
 		free_g_data();
 		exit(EXIT_FAILURE);
 	}
