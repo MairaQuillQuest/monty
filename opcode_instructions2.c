@@ -79,7 +79,7 @@ void monty_nop(stacknode_t **doubly_ll, unsigned int nline)
  * @nline: line number;
  * Return: no return
  */
-void monty_sub(stacknode_t **doubly, unsigned int nline)
+void monty_sub(stacknode_t **doubly_ll, unsigned int nline)
 {
 	int m = 0;
 	stacknode_t *aux = NULL;
