@@ -44,7 +44,7 @@ FILE *check_input(int argc, char *argv[])
 
 	if (argc == 1 || argc > 2)
 	{
-		dprintf(2, "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -52,7 +52,7 @@ FILE *check_input(int argc, char *argv[])
 
 	if (file_desc == NULL)
 	{
-		dprintf(2, "Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -85,8 +85,8 @@ int main(int argc, char *argv[])
 			f = get_opcode_func(lines[0]);
 			if (!f)
 			{
-				dprintf(2, "L%u: ", g_data.cur_line);
-				dprintf(2, "unknown instruction %s\n", lines[0]);
+				fprintf(stderr, "L%u: ", g_data.cur_line);
+				fprintf(stderr, "unknown instruction %s\n", lines[0]);
 				free_g_data();
 				exit(EXIT_FAILURE);
 			}
