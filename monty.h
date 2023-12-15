@@ -64,7 +64,7 @@ typedef struct OpFunc_s
 extern global_t g_data;
 
 /* opcode_instructuions*/
-void _push(stacknode_t **stacknode, unsigned int line_number);
+void monty_push(stacknode_t **stacknode, unsigned int line_number);
 void monty_pall(stacknode_t **stacknode, unsigned int line_number);
 void monty_pint(stacknode_t **doubly_ll, unsigned int nline);
 void monty_pop(stacknode_t **doubly_ll, unsigned int nline);
