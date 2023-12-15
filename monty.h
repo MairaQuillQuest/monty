@@ -93,7 +93,7 @@ void *_custom_calloc(unsigned int quelm, unsigned int size);
 int _custom_strcmp(char *s1, char *s2);
 
 /* doubly linked list functions */
-stack_t *add_node_end(stacknode_t **dll_head, const int n);
+stacknode_t *add_node_end(stacknode_t **dll_head, const int n);
 stacknode_t *add_node_begin(stacknode_t **dll_head, const int n);
 void free_dll(stacknode_t *dll_head);
 
