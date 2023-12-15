@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 			g_data.sec_param = _custom_strtok(NULL, " \t\n");
 			f(&g_data.dll_head, g_data.cur_line);
 		}
-		nlines = getline(&g_data.input_buffer, &size, file_desc);
+		while (fgets(g_data.input_buffer, size, file_desc) != NULL)
 		g_data.cur_line++;
 	}
 
